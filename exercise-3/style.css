@@ -14,3 +14,33 @@ select{
     height: 24px;
     width: 240px;
 }
+
+
+/*thr*/
+/*改变rare样式(chrome/safari)*/
+input[type=range] {
+    -webkit-appearance: none;
+    border-radius: 10px; /*进度条改为圆角*/
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track{
+    background-color: #eee;
+}
+/*消除number的小箭头(chrome/safari)*/
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+/*firefox浏览器*/
+
+/*改变滑动导轨*/
+input[type='range']::-moz-range-track{
+    background-color: #eee;
+}
+/*消除number的小箭头*/
+input[type="number"]{-moz-appearance:textfield;}
+
